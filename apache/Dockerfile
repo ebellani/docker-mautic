@@ -20,8 +20,7 @@ RUN curl -o mautic.zip -SL https://s3.amazonaws.com/mautic/releases/${MAUTIC_VER
  && mkdir /usr/src/mautic \
  && unzip mautic.zip -d /usr/src/mautic \
  && rm mautic.zip \
- && chown -R www-data:www-data /usr/src/mautic \
- && chown -R www-data:www-data /var/www/html/app/
+ && chown -R www-data:www-data /usr/src/mautic 
 
 # Copy init scripts and custom .htaccess
 COPY docker-entrypoint.sh /entrypoint.sh
